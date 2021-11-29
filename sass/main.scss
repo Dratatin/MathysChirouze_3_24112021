@@ -1,0 +1,18 @@
+//Utils
+@import "./utils/variables";
+@import "./utils/mixins";
+
+//Base
+@import "./base/globalset";
+@import "./base/typo";
+
+//Layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+
+//Pages
+@import "./pages/acceuil";
+@import "./pages/a-la-française";
+@import "./pages/la-note-enchantee";
+@import "./pages/la-palette-du-gout";
+@import "./pages/le-delice-des-sens";
