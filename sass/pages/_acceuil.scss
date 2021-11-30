@@ -1,0 +1,22 @@
+.location-block{
+    @include flexrow;
+    padding: 1em;
+    font-size: $fontsmall;
+    font-weight: bolder;
+    color: lighten(black, 20%);
+    background: darken(white, 10%);
+    &__content{
+        position: relative;
+        i{
+            position: absolute;
+            left:-2em;
+        }
+    }
+}
+
+.acceuil-info{
+    @include flexcolumn;
+    text-align: center;
+    padding: $blockpadding;
+    background: darken(white, 5%);
+}

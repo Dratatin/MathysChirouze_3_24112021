@@ -1,0 +1,15 @@
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexrow {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin box-shadow ($spray, $location:0em){
+    box-shadow: $shadowcolor 0em ($location) ($spray);
+}
