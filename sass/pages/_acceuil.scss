@@ -1,15 +1,19 @@
+h2{
+    margin: 0 0 1em 0;
+}
+
 .location-block{
     @include flexrow;
     padding: 1em;
     font-size: $fontsmall;
-    font-weight: bolder;
-    color: lighten(black, 20%);
+    font-weight: $weightmedium;
+    color: $lightenfontcolor;
     background: darken(white, 10%);
     &__content{
         position: relative;
         i{
             position: absolute;
-            left:-2em;
+            left:-1.5em;
         }
     }
 }
@@ -19,4 +23,54 @@
     text-align: center;
     padding: $blockpadding;
     background: darken(white, 5%);
+    &__texte{
+        margin: 0em 1em 1em 1em;
+        font-size: $fontmedium;
+        font-weight: $weightlight;
+    }
+}
+
+.fct-list{
+    margin: 0 0 0 1em;
+    &__content{
+        display: flex;
+        margin: 0 0 1.5em 0;
+        border-radius: 1.2em;
+        background: darken(white, 5%);
+        position: relative;
+        justify-content: flex-start;
+        @include box-shadow(0.8em, 0.2em);
+        &--pink{
+            background: $primarylighten;
+        }
+        .fct-list__content__icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 0 2em;
+            width: 1em;
+            color: $lightenfontcolor;
+            &--pink{
+                color: $primary;
+            }
+        }
+        p:first-child{
+            position: absolute;
+            left: -0.7em;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 1em;
+            background: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        p:last-child{
+            padding: 1.5em;
+            position: relative;
+        }   
+    }
 }

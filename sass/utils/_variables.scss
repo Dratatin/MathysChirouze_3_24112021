@@ -1,13 +1,24 @@
 //Couleurs
 
 $primary:#9356DC;
+$primarylighten: lighten($primary,35%);
 $secondary:#FF79DA;
 $tertiary:#99E2D0;
 
-$shadowcolor:lighten(black,60%);
+//Font
+
+$lightenfontcolor: lighten(black, 30%);
 
 $fontsmall: 1em;
-$fontmedium: 1.5em;
+$fontmedium: 1.2em;
 $fontbig: 2em;
 
-$blockpadding: 2em;
+$weightlight: 300;
+$weightmedium: 600;
+$weightbold: 800;
+
+//Autre
+
+$blockpadding: 3em 1em;
+
+$shadowcolor:darken(white,20%);
