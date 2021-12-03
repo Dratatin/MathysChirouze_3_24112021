@@ -1,8 +1,19 @@
 .header{
     @include flexcolumn;
-    @include box-shadow(0.5em);
     position: relative;
-    .header__title{
+    &--shadowtrue{
+        @include box-shadow(0.3em 0.2em);
+    }
+    &__title{
         margin: 0.6em 0 0.2em 0;
+        font-size: $fontbig;
+    }
+    &__link{
+        position: absolute;
+        top: 55%;
+        transform: translate(0%, -50%);
+        left: 5%;
+        font-size: $iconbig;
+        color: $lightenfontcolor;
     }
 }

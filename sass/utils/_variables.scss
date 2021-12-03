@@ -5,9 +5,11 @@ $primarylighten: lighten($primary,35%);
 $secondary:#FF79DA;
 $tertiary:#99E2D0;
 
+$darkenbg: darken(white, 5%);
+
 //Font
 
-$lightenfontcolor: lighten(black, 30%);
+$lightenfontcolor: lighten(black, 25%);
 
 $fontsmall: 1em;
 $fontmedium: 1.2em;
@@ -17,8 +19,12 @@ $weightlight: 300;
 $weightmedium: 600;
 $weightbold: 800;
 
-//Autre
+//Icon
 
-$blockpadding: 3em 1em;
+$iconsmall: 1em;
+$iconbig: 1.5em;
+
+
+//Autre
 
 $shadowcolor:darken(white,20%);

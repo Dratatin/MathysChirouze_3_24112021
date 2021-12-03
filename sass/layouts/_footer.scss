@@ -13,6 +13,7 @@ footer{
             @include flexrow;
             width: 1em;
             margin: 0 0.5em 0 0;
+            font-size: $iconsmall;
         }
     }
 }
