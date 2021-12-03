@@ -4,6 +4,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 main > * {
@@ -12,6 +13,11 @@ main > * {
 
 h1, h2, h3, h4, p {
   margin: 0;
+}
+
+h1, h4 {
+  font-family: "Shrikhand", serif;
+  font-weight: normal;
 }
 
 a {
@@ -25,13 +31,8 @@ ul {
   padding: 0;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-family: "Shrikhand", serif;
-  font-weight: normal;
+img {
+  width: 100%;
 }
 
 .header {
@@ -56,6 +57,32 @@ h1 {
   margin: 0.6em 0 0.2em 0;
 }
 
+footer {
+  background: #333333;
+  color: white;
+  padding: 1em;
+}
+
+.footer-list {
+  margin: 1em 0 0 0;
+}
+.footer-list__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0.5em 0;
+}
+.footer-list__content i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1em;
+  margin: 0 0.5em 0 0;
+}
+
 .boutton {
   padding: 1em;
   margin: 1.5em;
@@ -71,7 +98,7 @@ h2 {
   margin: 0 0 1em 0;
 }
 
-.location-block {
+.block-location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,15 +111,15 @@ h2 {
   color: #4d4d4d;
   background: #e6e6e6;
 }
-.location-block__content {
+.block-location__content {
   position: relative;
 }
-.location-block__content i {
+.block-location__content i {
   position: absolute;
   left: -1.5em;
 }
 
-.acceuil-info {
+.section-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,16 +137,18 @@ h2 {
   padding: 3em 1em;
   background: #f2f2f2;
 }
-.acceuil-info__texte {
+.section-info__texte {
   margin: 0em 1em 1em 1em;
   font-size: 1.2em;
   font-weight: 300;
 }
 
-.fct-list {
+.fonc-list {
   margin: 0 0 0 1em;
 }
-.fct-list__content {
+.fonc-list__content {
+  -webkit-box-shadow: #cccccc 0em 0.2em 0.8em;
+          box-shadow: #cccccc 0em 0.2em 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,30 +159,45 @@ h2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-shadow: #cccccc 0em 0.2em 0.8em;
-          box-shadow: #cccccc 0em 0.2em 0.8em;
 }
-.fct-list__content--pink {
+.fonc-list__content--pink {
   background: #f2eafb;
 }
-.fct-list__content .fct-list__content__icon {
+.fonc-list__content i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 0 2em;
   width: 1em;
   color: #4d4d4d;
 }
-.fct-list__content .fct-list__content__icon--pink {
+.fonc-list__content .icon--pink {
   color: #9356DC;
 }
-.fct-list__content p:first-child {
+.fonc-list__content p:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   left: -0.7em;
   top: 50%;
@@ -164,18 +208,102 @@ h2 {
   height: 1.5em;
   border-radius: 1em;
   background: #9356DC;
+  color: white;
+}
+.fonc-list__content p:last-child {
+  padding: 1.5em;
+  position: relative;
+}
+
+.section-resto {
+  background: #f2f2f2;
+}
+
+.resto-link {
+  background: white;
+  border-radius: 1em;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 1.5em 0;
+  -webkit-box-shadow: #cccccc 0em 0em 0.8em;
+          box-shadow: #cccccc 0em 0em 0.8em;
+}
+.resto-link__box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+.resto-link__box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+}
+.resto-link__box > p {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #99E2D0;
+  color: #278870;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  border-radius: 0.2em;
+}
+.resto-link__box div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em;
+}
+.resto-link__box div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.fct-list__content p:last-child {
-  padding: 1.5em;
-  position: relative;
+.resto-link__box div div h3 {
+  margin: 0 0 0.2em 0;
+}
+.resto-link__box div i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  font-size: 1.5em;
 }/*# sourceMappingURL=main.css.map */

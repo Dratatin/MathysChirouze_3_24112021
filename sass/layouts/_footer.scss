@@ -1,0 +1,18 @@
+footer{
+    background: lighten(black, 20%);
+    color: white;
+    padding: 1em;
+}
+
+.footer-list{
+    margin: 1em 0 0 0;
+    &__content{
+        display: flex;
+        margin: 0 0 0.5em 0;
+        i{
+            @include flexrow;
+            width: 1em;
+            margin: 0 0.5em 0 0;
+        }
+    }
+}

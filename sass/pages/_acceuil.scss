@@ -2,7 +2,7 @@ h2{
     margin: 0 0 1em 0;
 }
 
-.location-block{
+.block-location{
     @include flexrow;
     padding: 1em;
     font-size: $fontsmall;
@@ -18,7 +18,7 @@ h2{
     }
 }
 
-.acceuil-info{
+.section-info{
     @include flexcolumn;
     text-align: center;
     padding: $blockpadding;
@@ -30,31 +30,30 @@ h2{
     }
 }
 
-.fct-list{
+.fonc-list{
     margin: 0 0 0 1em;
     &__content{
+        @include box-shadow(0.8em, 0.2em);
         display: flex;
         margin: 0 0 1.5em 0;
         border-radius: 1.2em;
         background: darken(white, 5%);
         position: relative;
         justify-content: flex-start;
-        @include box-shadow(0.8em, 0.2em);
         &--pink{
             background: $primarylighten;
         }
-        .fct-list__content__icon{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        i{
+            @include flexcolumn;
             margin: 0 0 0 2em;
             width: 1em;
             color: $lightenfontcolor;
-            &--pink{
-                color: $primary;
-            }
+        }
+        .icon--pink{
+            color: $primary;
         }
         p:first-child{
+            @include flexcolumn;
             position: absolute;
             left: -0.7em;
             top: 50%;
@@ -63,14 +62,61 @@ h2{
             height: 1.5em;
             border-radius: 1em;
             background: $primary;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             color: white;
         }
         p:last-child{
             padding: 1.5em;
             position: relative;
         }   
+    }
+}
+
+.section-resto{
+    background: darken(white, 5%);
+}
+
+.resto-link{
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    display: flex;
+    margin: 0 0 1.5em 0;
+    @include box-shadow(0.8em, 0em);
+    &__box{
+        flex: 1;
+        position: relative;
+        img{
+            object-fit: cover;
+            height: 200px;
+        }
+        &> p{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #99E2D0;
+            color: darken(#99E2D0, 40%);
+            padding: 0.5em 1em;
+            font-weight: $weightmedium;
+            border-radius: 0.2em;
+        }
+        div{
+            @include flexrow;
+            flex: 1;
+            justify-content: space-between;
+            margin: 0.5em;
+            div{
+                @include flexcolumn;
+                flex-basis: 80%;
+                align-items: flex-start;
+                h3{
+                    margin: 0 0 0.2em 0;
+                }
+            }
+            i{
+                @include flexcolumn;
+                flex-basis: 20%;
+                font-size: 1.5em;
+            } 
+        } 
     }
 }
