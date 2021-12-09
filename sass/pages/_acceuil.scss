@@ -4,6 +4,8 @@
     }
 }
 
+// Localisation
+
 .block-location{
     @include flexrow;
     padding: 1em;
@@ -21,6 +23,8 @@
     }
 }
 
+// Info acceuil
+
 .section-info{
     @include flexcolumn;
     text-align: center;
@@ -32,9 +36,11 @@
     }
 }
 
-.fonc-list{
+// Liste Fonctionnement
+
+.list-fct{
     margin: 0 0 0 1em;
-    &__content{
+    .list-elmt{
         @include box-shadow(0.8em, 0.2em);
         display: flex;
         margin: 0 0 1.5em 0;
@@ -45,15 +51,15 @@
         &--pink{
             background: $primarylighten;
         }
-        i{
+        &__icon{
             @include flexcolumn;
             margin: 0 0 0 2em;
             width: 1em;
             color: $lightenfontcolor;
             font-size: $iconsmall;
-        }
-        .icon--pink{
-            color: $primary;
+            &--pink{
+                color: $primary;
+            }
         }
         p:first-child{
             @include flexcolumn;
@@ -73,23 +79,33 @@
     }
 }
 
+// Restaurant
+
 .section-resto{
     background: $darkenbg;
 }
 
-.resto-link{
+.article-resto{
     background: white;
     border-radius: 1em;
     overflow: hidden;
     display: flex;
     margin: 0 0 1.5em 0;
     @include box-shadow(0.8em, 0em);
-    &__box{
+    .link-resto{
         flex: 1;
         position: relative;
+        z-index: 0;
         img{
             object-fit: cover;
             height: 200px;
+        }
+        div{
+            flex: 1;
+            margin: 1em;
+            @include flexcolumn;
+            flex-basis: 80%;
+            align-items: flex-start;
         }
         &> p{
             position: absolute;
@@ -101,21 +117,41 @@
             font-weight: $weightmedium;
             border-radius: 0.1em;
         }
-        div{
-            @include flexrow;
-            flex: 1;
-            justify-content: space-between;
-            margin: 0.5em;
-            div{
-                @include flexcolumn;
-                flex-basis: 80%;
-                align-items: flex-start;
+    }
+    .block-heart{
+        position: relative;
+        z-index: 5;
+        &__icon{
+            cursor: pointer;
+            position: absolute;
+            right: 40px;
+            bottom: 30px;
+            font-size: $iconbig;
+            &--hide{
+                opacity: 0;
+                background: linear-gradient(170deg, $secondary, $primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
             }
-            i{
-                @include flexcolumn;
-                flex-basis: 20%;
-                font-size: $iconbig;
-            } 
-        } 
+        }
+        &:hover{
+            &> .block-heart__icon--visible{
+                opacity: 0;
+            }
+            &> .block-heart__icon--hide{
+                opacity: 1;
+                animation: 0.3s ease-in-out heartactive;
+            }
+        }
     }
 }
+
+@keyframes heartactive {
+    from { 
+        transform: scale(0);
+    }
+    to   { 
+        transform: scale(1);
+    }
+  }

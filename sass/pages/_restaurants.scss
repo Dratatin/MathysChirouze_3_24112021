@@ -47,11 +47,54 @@
     justify-content: space-between;
     background: white;
     border-radius: 1em;
-    padding: 1em;
+    overflow: hidden;
     margin: 0 0 1em 0;
     @include box-shadow(0.8em, 0.2em);
+    position: relative;
+    &:hover{
+        & .block-plats__check{
+            transform: translateX(0);
+            i{
+                transform: rotate(0deg);
+            }
+        }
+        & .block-plats__prices{
+            transform: translateX(-75px);
+        }
+    }
+    &__description{
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 1em;
+        h3, dd{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
     &__prices{
         font-weight: $weightmedium;
         margin: auto 0 0 0;
+        transform: translateX(0px);
+        transition: all 0.5s ease-in-out;
+        transform-origin: right;
+        padding: 0 1em 1em 0;
+    }
+    &__check{
+        transform: translateX(75px);
+        transition: all 0.5s ease-in-out;
+        transform-origin: right;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 70px;
+        @include flexcolumn;
+        color: white;
+        background: $tertiary;
+        font-size: $iconbig;
+        i{
+            transform: rotate(360deg);
+            transition: all 0.5s ease-in-out 0.1s;
+        }
     }
 }
