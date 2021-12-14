@@ -8,6 +8,7 @@
 @mixin flexrow {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @mixin box-shadow ($spray, $location:0em){
