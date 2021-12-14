@@ -3,7 +3,7 @@
 @import "./utils/mixins";
 
 //Base
-@import "./base/globalset";
+@import "./base/reset";
 @import "./base/typo";
 
 //Layouts
@@ -12,6 +12,7 @@
 
 //Components
 @import "./components/boutton";
+@import "./components/loader";
 
 //Pages
 @import "./pages/acceuil";
