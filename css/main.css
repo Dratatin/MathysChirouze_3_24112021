@@ -438,7 +438,7 @@ footer .nav-footer .footer-list__content i {
             transform: translateY(0);
   }
 }
-.main-acceuil .block-location {
+.main-acceuil .form-location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,19 +448,47 @@ footer .nav-footer .footer-list__content i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
   font-size: 1em;
   font-weight: 600;
-  color: #404040;
   background: #ededed;
+  padding: 1em 1em 1em 2.5em;
+  color: #404040;
 }
-.main-acceuil .block-location__content {
-  position: relative;
+.main-acceuil .form-location__label {
+  margin: 0 0.8em 0 0;
 }
-.main-acceuil .block-location__content i {
-  position: absolute;
-  left: -1.5em;
+.main-acceuil .form-location__label i {
   font-size: 1em;
+}
+.main-acceuil .form-location__input {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  width: 10em;
+}
+.main-acceuil .form-location__input::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.main-acceuil .form-location__input::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.main-acceuil .form-location__input:-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.main-acceuil .form-location__input::-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.main-acceuil .form-location__input::placeholder {
+  color: inherit;
+  opacity: 1;
 }
 .main-acceuil .section-info {
   -webkit-box-flex: 1;
