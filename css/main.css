@@ -517,7 +517,7 @@ footer .nav-footer .footer-list__content i {
 }
 @media screen and (min-width: 768px) {
   .main-acceuil .section-info {
-    background-image: url(../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(../img/restaurants/smaller/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -945,6 +945,7 @@ footer .nav-footer .footer-list__content i {
   }
 }
 .main-restaurant .section-commande__title i {
+  margin: 0 0 0 0.5em;
   font-size: 1.5em;
 }
 .main-restaurant .section-commande__boutton {
