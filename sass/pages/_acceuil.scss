@@ -9,6 +9,7 @@
         color: $lightenfontcolor;
         &__label{
             margin: 0 0.8em 0 0;
+            cursor: pointer;
             i{
                 font-size: $iconsmall;
             }
