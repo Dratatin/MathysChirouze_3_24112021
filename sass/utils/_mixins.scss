@@ -11,6 +11,6 @@
     align-items: center;
 }
 
-@mixin box-shadow ($spray, $location:0em){
-    box-shadow: $shadowcolor 0em ($location) ($spray);
+@mixin box-shadow ($spray, $location:0em, $shadowcolor:darken(#FFFFFF,20%)){
+    box-shadow: ($shadowcolor) 0em ($location) ($spray);
 }

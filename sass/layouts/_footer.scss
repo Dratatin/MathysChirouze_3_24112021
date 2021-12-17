@@ -2,16 +2,33 @@ footer{
     background: lighten(black, 20%);
     color: white;
     padding: 1em;
-    .footer-list{
-        margin: 1em 0 0 0;
-        &__content{
-            display: flex;
-            margin: 0 0 0.5em 0;
-            i{
+    @media screen and(min-width:768px) {
+        padding: 3em;
+        @include flexcolumn;
+    }
+    h4{
+        @media screen and(min-width:768px) {
+            font-size: $fontsmalldesktop;
+        }
+    }
+    .nav-footer{
+        .footer-list{
+            margin: 1em 0 0 0;
+            @media screen and(min-width:768px) {
                 @include flexrow;
-                width: 1em;
-                margin: 0 0.5em 0 0;
-                font-size: $iconsmall;
+            }
+            &__content{
+                display: flex;
+                margin: 0 0 0.5em 0;
+                @media screen and(min-width:768px) {
+                    margin: 10px;
+                }
+                i{
+                    @include flexrow;
+                    width: 1em;
+                    margin: 0 0.5em 0 0;
+                    font-size: $iconsmall;
+                }
             }
         }
     }

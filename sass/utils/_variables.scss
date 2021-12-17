@@ -5,15 +5,28 @@ $primarylighten: lighten($primary,35%);
 $secondary:#FF79DA;
 $tertiary:#99E2D0;
 
-$darkenbg: darken(white, 5%);
+$primarylighten: lighten($primary,5%);
+$secondarylighten: lighten($secondary,5%);
+
+$gradientcolor: linear-gradient(170deg, $secondary, $primary);
+$gradientcolorlighten: linear-gradient(170deg, $secondarylighten, $primarylighten);
+
+
+$darkenbg: darken(#FFFFFF, 3%);
 
 //Typo
 
 $lightenfontcolor: lighten(black, 25%);
 
 $fontsmall: 1em;
+$fontsmalldesktop: $fontsmall*1.2;
 $fontmedium: 1.2em;
-$fontbig: 2em;
+$fontmediumdesktop: $fontmedium*1.2;
+$fontbig: 1.8em;
+$fontbigdesktop: $fontbig*1.2;
+
+$sizelogo: 2em;
+$sizelogodesktop: $sizelogo*1.2;
 
 $weightlight: 300;
 $weightmedium: 600;
@@ -23,11 +36,6 @@ $weightbold: 800;
 
 $iconsmall: 1em;
 $iconbig: 1.5em;
-
-
-//Autre
-
-$shadowcolor:darken(white,20%);
 
 //Variable page restaurant
 $timetcheckanim: 0.5s;

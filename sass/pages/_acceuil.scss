@@ -1,150 +1,228 @@
-.main-acceuil{
-    &> section{
-        padding: 3em 1em;
-    }
-}
-
-// Localisation
-
-.block-location{
-    @include flexrow;
-    padding: 1em;
-    font-size: $fontsmall;
-    font-weight: $weightmedium;
-    color: $lightenfontcolor;
-    background: darken(white, 10%);
-    &__content{
-        position: relative;
-        i{
-            position: absolute;
-            left:-1.5em;
-            font-size: $iconsmall;
+.main-acceuil {
+    // Localisation
+    .block-location {
+        @include flexrow;
+        padding: 1em;
+        font-size: $fontsmall;
+        font-weight: $weightmedium;
+        color: $lightenfontcolor;
+        background: darken(white, 7%);
+        &__content{
+            position: relative;
+            i{
+                position: absolute;
+                left:-1.5em;
+                font-size: $iconsmall;
+            }
         }
     }
-}
-
-// Info acceuil
-
-.section-info{
-    @include flexcolumn;
-    text-align: center;
-    background: $darkenbg;
-    &__texte{
-        margin: 0em 1em 1em 1em;
-        font-size: $fontmedium;
-        font-weight: $weightlight;
-    }
-}
-
-// Liste Fonctionnement
-
-.list-fct{
-    margin: 0 0 0 1em;
-    .list-elmt{
-        @include box-shadow(0.8em, 0.2em);
-        display: flex;
-        margin: 0 0 1.5em 0;
-        border-radius: 1.2em;
+    // Info acceuil
+    .section-info{
+        flex: 1;
+        @include flexcolumn;
+        text-align: center;
         background: $darkenbg;
-        position: relative;
-        justify-content: flex-start;
-        &--pink{
-            background: $primarylighten;
-        }
-        &__icon{
-            @include flexcolumn;
-            margin: 0 0 0 2em;
-            width: 1em;
-            color: $lightenfontcolor;
-            font-size: $iconsmall;
-            &--pink{
-                color: $primary;
-            }
-        }
-        p:first-child{
-            @include flexcolumn;
-            position: absolute;
-            left: -0.7em;
-            top: 50%;
-            transform: translate(0%, -50%);
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 1em;
-            background: $primary;
+        padding: 3em 1em;
+        @media screen and (min-width: 768px){
+            background-image: url(../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             color: white;
+            height: 400px;
         }
-        p:last-child{
-            padding: 1.5em;
-        }   
-    }
-}
-
-// Restaurant
-
-.section-resto{
-    background: $darkenbg;
-    .article-resto{
-        background: white;
-        border-radius: 1em;
-        overflow: hidden;
-        display: flex;
-        margin: 0 0 1.5em 0;
-        @include box-shadow(0.8em, 0em);
-        .link-resto{
-            flex: 1;
-            position: relative;
-            z-index: 0;
-            img{
-                object-fit: cover;
-                height: 200px;
-            }
-            div{
-                flex: 1;
-                margin: 1em;
-                @include flexcolumn;
-                flex-basis: 80%;
-                align-items: flex-start;
-            }
-            &> p{
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                background: $tertiary;
-                color: darken($tertiary, 40%);
-                padding: 0.5em 1.1em;
-                font-weight: $weightmedium;
-                border-radius: 0.1em;
+        &__texte{
+            margin: 0em 1em 1em 1em;
+            font-size: $fontmedium;
+            font-weight: $weightlight;
+            @media screen and (min-width: 768px){
+                font-size: $fontmedium*2;
+                text-shadow: black 0 0 10px;
             }
         }
-        .block-heart{
-            position: relative;
-            z-index: 5;
-            &__icon{
-                cursor: pointer;
-                position: absolute;
-                right: 40px;
-                bottom: 30px;
-                font-size: $iconbig;
-                &--hide{
-                    opacity: 0;
-                    background: linear-gradient(170deg, $secondary, $primary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                }
-            }
-            &:hover{
-                &> .block-heart__icon--visible{
-                    opacity: 0;
-                }
-                &> .block-heart__icon--hide{
-                    opacity: 1;
-                    animation: 0.3s ease-in-out heartactive;
-                }
+        &__title{
+            margin: 0 0 1em 0;
+            font-size: $fontbig;
+            @media screen and (min-width: 768px){
+                text-shadow: black 0 0 10px;
             }
         }
     }
+    // Fonctionnement
+    .section-fnc {
+        padding: 3em 1em;
+        position: relative;
+        @media screen and(min-width:768px) {
+            @include flexcolumn;
+            padding: 4em 0;
+        }
+        &__title{
+            font-size: $fontbig;
+            margin: 0 0 1em 0;
+            @media screen and(min-width:768px) {
+                font-size: $fontbigdesktop;
+            }
+        }
+        .list-fnc {
+            margin: 0 0 0 1em;
+            @media screen and(min-width:768px) {
+                @include flexrow;
+                flex-wrap: wrap;
+                width: 80%;
+            }
+            @media screen and(min-width:992px) {
+                width: unset;
+            }
+            .list-elmt {
+                @include box-shadow(0.8em, 0.2em);
+                display: flex;
+                margin: 0 0 1.5em 0;
+                border-radius: 1.2em;
+                background: $darkenbg;
+                position: relative;
+                justify-content: flex-start;
+                @media screen and(min-width:768px) {
+                    width: 100%;
+                }
+                @media screen and(min-width:992px) {
+                    margin: 0;
+                    width: unset;
+                }
+                &--margin{
+                    @media screen and(min-width:992px) {
+                        margin: 0 2em;
+                    } 
+                }
+                &--pink{
+                    background: lighten($primary, 35%);
+                }
+                &__icon {
+                    @include flexcolumn;
+                    margin: 0 0 0 2em;
+                    width: 1em;
+                    color: $lightenfontcolor;
+                    font-size: $iconsmall;
+                    &--pink{
+                        color: $primary;
+                    }
+                }
+                p:first-child {
+                    @include flexcolumn;
+                    position: absolute;
+                    left: -0.7em;
+                    top: 52%;
+                    transform: translate(0%, -50%);
+                    width: 1.5em;
+                    height: 1.5em;
+                    border-radius: 1em;
+                    background: $primary;
+                    color: white;
+                }
+                p:last-child {
+                    padding: 1.5em;
+                }   
+            }
+        }
+    }
+    // Restaurant
+    .section-resto{
+        background: $darkenbg;
+        padding: 3em 0 3em 1em;
+        position: relative;
+        @media screen and(min-width:768px) {
+            padding: 4em 0;
+            @include flexcolumn;
+        }
+        &__title{
+            font-size: $fontbig;
+            margin: 0 0 1em 0;
+            @media screen and(min-width:768px) {
+                font-size: $fontbigdesktop;
+            }
+        }
+        .conteneur-resto{
+            @include flexrow;
+            flex-wrap: wrap;
+            @media screen and(min-width:768px) {
+                margin: 0 0 0 3em;
+            }
+            .block-resto{
+                @include flexrow;
+                flex-wrap: wrap;
+                width: 100%;
+                @media screen and(min-width:768px) {
+                    flex: 1;
+                    flex-wrap: unset;
+                }
+                .article-resto{
+                    flex: 1;
+                    min-width: 290px;
+                    background: white;
+                    border-radius: 1em;
+                    overflow: hidden;
+                    display: flex;
+                    margin: 0 1em 1em 0;
+                    @include box-shadow(0.8em, 0em);
+                    @media screen and(min-width:768px) {
+                        margin: 0 3em 3em 0;
+                    }
+                    .link-resto{
+                        flex: 1;
+                        position: relative;
+                        z-index: 0;
+                        img{
+                            object-fit: cover;
+                            height: 200px;
+                        }
+                        div{
+                            margin: 1em;
+                            @include flexcolumn;
+                            align-items: flex-start;
+                        }
+                        &> p{
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            background: $tertiary;
+                            color: darken($tertiary, 40%);
+                            padding: 0.5em 1.1em;
+                            font-weight: $weightmedium;
+                            border-radius: 0.1em;
+                        }
+                    }
+                    .block-heart{
+                        position: relative;
+                        z-index: 5;
+                        &__icon{
+                            cursor: pointer;
+                            position: absolute;
+                            right: 40px;
+                            bottom: 30px;
+                            font-size: $iconbig;
+                            &--hide{
+                                opacity: 0;
+                                background: linear-gradient(170deg, $secondary, $primary);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                color: transparent;
+                            }
+                        }
+                        &:hover{
+                            &> .block-heart__icon--visible{
+                                opacity: 0;
+                            }
+                            &> .block-heart__icon--hide{
+                                opacity: 1;
+                                animation: 0.3s ease-in-out heartactive;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 @keyframes heartactive {
     from { 

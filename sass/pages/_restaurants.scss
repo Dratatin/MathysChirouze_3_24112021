@@ -1,9 +1,15 @@
 .main-restaurant {
     background: $darkenbg;
+    position: relative;
+    z-index: 2;
+    @media screen and(min-width:768px) {
+        background: white;
+    }
     img{
+        object-fit: cover;
+        vertical-align: bottom;
         @media screen and (min-width: 768px) {
-            height: 30em;
-            object-fit: cover; 
+            height: 35em;
         }
     }
     .section-commande {
@@ -12,13 +18,37 @@
         border-radius: 2em;
         padding: 1em;
         background: $darkenbg;
+        &::before{
+            @media screen and (min-width:768px){
+                @include box-shadow(2em);
+                content:"";
+                z-index: -1;
+                position: absolute;
+                border-radius: 2em;
+                top: 175px;
+                right: 0;
+                bottom: 0;
+                left: 0; 
+            }
+        }
+        @media screen and(min-width:768px) {
+            top: -175px;
+            width: 70%;
+            margin: auto;
+        }
         &__title{
             @include flexrow;
             justify-content: space-between;
             align-items: center;
             margin: 1em 1em 1em 0;
+            @media screen and(min-width:768px) {
+                margin: 2em;
+            }
             h1{
                 font-size: $fontbig;
+                @media screen and(min-width:768px) {
+                    font-size: $fontbigdesktop;
+                }
             }
             i{
                 font-size: $iconbig;
@@ -28,6 +58,9 @@
             @include flexrow;
         }
         .section-menu{
+            @media screen and(min-width:768px) {
+                margin: 0 4em 4em 4em;
+            }
             .block-formule {
                 animation: slide 1s ease-in-out both;
                 margin: 0 0 3em 0;
@@ -40,12 +73,16 @@
                     }
                 }
                 h2 {
-                    font-size: $fontmedium;
+                    font-size: $fontsmall;
                     font-weight: $weightlight;
                     text-transform: uppercase;
+                    margin: 0 0 1em 0;
+                    @media screen and(min-width:768px) {
+                        font-size: $fontsmalldesktop;
+                    }
                     span {
                         border-bottom: 3px solid $tertiary;
-                        margin: 0.2em 0 0 0;
+                        padding: 0 0 0.2em 0;
                     }
                 }
                 .block-plats {
@@ -57,6 +94,9 @@
                     margin: 0 0 1em 0;
                     @include box-shadow(0.8em, 0.2em);
                     position: relative;
+                    @media screen and(min-width:992px) {
+                        margin: 1em 2em 1em 2em;
+                    }
                     &:hover{
                         & .block-plats__description{
                             margin: 0 75px 0 0;
