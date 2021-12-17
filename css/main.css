@@ -945,6 +945,7 @@ footer .nav-footer .footer-list__content i {
   }
 }
 .main-restaurant .section-commande__title i {
+  cursor: unset;
   font-size: 1.5em;
 }
 .main-restaurant .section-commande__boutton {
@@ -1105,6 +1106,7 @@ footer .nav-footer .footer-list__content i {
   -webkit-transition: all 0.5s ease-in-out 0.1s;
   -o-transition: all 0.5s ease-in-out 0.1s;
   transition: all 0.5s ease-in-out 0.1s;
+  cursor: unset;
 }
 
 @-webkit-keyframes slide {
