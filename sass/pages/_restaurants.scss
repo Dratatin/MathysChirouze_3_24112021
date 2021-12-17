@@ -51,7 +51,6 @@
                 }
             }
             i{
-                cursor:unset;
                 font-size: $iconbig;
             }
         }
@@ -146,7 +145,6 @@
                         i {
                             transform: rotate(360deg);
                             transition: all $timetcheckanim ease-in-out 0.1s;
-                            cursor:unset;
                         }
                     }
                 }
