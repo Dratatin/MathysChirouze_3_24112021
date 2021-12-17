@@ -4,13 +4,12 @@ $primary:#9356DC;
 $primarylighten: lighten($primary,35%);
 $secondary:#FF79DA;
 $tertiary:#99E2D0;
-
 $primarylighten: lighten($primary,5%);
 $secondarylighten: lighten($secondary,5%);
 
+//Couleurs boutton
 $gradientcolor: linear-gradient(170deg, $secondary, $primary);
 $gradientcolorlighten: linear-gradient(170deg, $secondarylighten, $primarylighten);
-
 
 $darkenbg: darken(#FFFFFF, 3%);
 
@@ -29,13 +28,18 @@ $sizelogo: 2em;
 $sizelogodesktop: $sizelogo*1.2;
 
 $weightlight: 300;
-$weightmedium: 600;
-$weightbold: 800;
+$weightmedium: 500;
+$weightbold: 700;
 
 //Icon
-
 $iconsmall: 1em;
 $iconbig: 1.5em;
 
-//Variable page restaurant
+//Variable page restaurant animation
 $timetcheckanim: 0.5s;
+
+//Loader
+$falldelay: 0.2s;
+$translatedelay: $falldelay * 4;
+$bouncedelay: $translatedelay + 0.2s;
+$opacitydelay: $bouncedelay * 2.5;

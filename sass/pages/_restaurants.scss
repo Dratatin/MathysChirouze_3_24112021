@@ -8,6 +8,7 @@
     img{
         object-fit: cover;
         vertical-align: bottom;
+        height: 18em;
         @media screen and (min-width: 768px) {
             height: 35em;
         }
@@ -15,8 +16,8 @@
     .section-commande {
         position: relative;
         top: -50px;
-        border-radius: 2em;
-        padding: 1em;
+        border-radius: 3em;
+        padding: 1.5em;
         background: $darkenbg;
         &::before{
             @media screen and (min-width:768px){
@@ -40,7 +41,7 @@
             @include flexrow;
             justify-content: space-between;
             align-items: center;
-            margin: 1em 1em 1em 0;
+            margin: 0.5em 1em 1em 0;
             @media screen and(min-width:768px) {
                 margin: 2em;
             }
@@ -62,7 +63,8 @@
             @media screen and(min-width:768px) {
                 margin: 0 4em 4em 4em;
             }
-            .block-formule {
+            //Block entrées / plats / desserts
+            .block-formule { 
                 animation: slide 1s ease-in-out both;
                 margin: 0 0 3em 0;
                 &--1{
@@ -154,6 +156,8 @@
     }
 }
 
+
+// Animation de l'icon check
 @keyframes slide{
     from{
         opacity: 0;
