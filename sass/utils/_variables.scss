@@ -1,5 +1,4 @@
 //Couleurs
-
 $primary:#9356DC;
 $primarylighten: lighten($primary,35%);
 $secondary:#FF79DA;
@@ -14,7 +13,6 @@ $gradientcolorlighten: linear-gradient(170deg, $secondarylighten, $primarylighte
 $darkenbg: darken(#FFFFFF, 3%);
 
 //Typo
-
 $lightenfontcolor: lighten(black, 25%);
 
 $fontsmall: 1em;
@@ -24,12 +22,12 @@ $fontmediumdesktop: $fontmedium*1.2;
 $fontbig: 1.8em;
 $fontbigdesktop: $fontbig*1.2;
 
-$sizelogo: 2em;
-$sizelogodesktop: $sizelogo*1.2;
-
 $weightlight: 300;
 $weightmedium: 500;
 $weightbold: 700;
+
+$sizelogo: 2em;
+$sizelogodesktop: $sizelogo*1.2;
 
 //Icon
 $iconsmall: 1em;
