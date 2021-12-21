@@ -910,7 +910,7 @@ footer .nav-footer .footer-list__content i {
     content: "";
     z-index: -1;
     position: absolute;
-    border-radius: 2em;
+    border-radius: 3em;
     top: 175px;
     right: 0;
     bottom: 0;
