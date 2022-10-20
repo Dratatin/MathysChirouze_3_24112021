@@ -5,7 +5,6 @@ Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet
 utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
 restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !  
 
-#### Sources :
 [Brief](https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P3+CSS+animations/DW+P3+-+Brief+creatif+-+Ohmyfood!.pdf)  
 [Maquette](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Maquettes%20Ohmyfood.zip)  
 
